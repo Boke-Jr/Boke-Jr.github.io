@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'Amiko-Semi';
+    src: url("fonts/Amiko/Amiko-SemiBold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #d1ccdc;
+}
+
+/** Menu navigation CSS **/
+.nav {
+    width: 100%;
+    height: 80px;
+    font-family: 'Amiko-Semi';
+}
+
+.nav-cont {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.nav-cont a {
+    font-size: 1.3em;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.nav-cont a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: left 300ms;
+}
+.nav-cont a:hover:after {
+    left: 0;
+}
+
+
+/* Welcome section CSS */
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome-cont {
+    padding-left: 30%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    position: relative;
+}
+
+.welcome-cont h1 {
+    color: #1a1a1a;
+    font-size: 2em;
+}
+
+.welcome-cont h2 {
+    color: #fff;
+    font-size: 3em;
+}
+
+.welcome-cont h3 {
+    color: #1a1a1a;
+    font-size: 2em;
+    padding-left: 200px;
+}
+
+.welcome-cont h3 a {
+    text-decoration: none;
+    color: #575582;
+}
+
+/** About Section CSS **/
+
+.about {
+    background: #525174;
+    color: #c7c7c7;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 3em;
+    font-family: 'Amiko-Semi';
+    padding-top: 50px;
+}
+
+.about-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    gap: 50px;
+    margin-top: -140px;
+}
+
+.card-cont {
+    width: 400px;
+    transition: all 300ms;
+}
+
+.desc-cont {
+    padding-top: 150px;
+    width: 50%;
+}
+
+.card-cont:hover {
+    width: 450px;
+}
+
+.card-cont .card-cover {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-cont .card-cover img {
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    transition: all 400ms;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+}
+
+.card-cont:hover .card-cover img {
+    top: 0;
+}
+
+.card-cont .img-back {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-size: cover;
+    background: white;
+    bottom: -80px;
+    left: 0;
+    border-radius: 20px 20px 0px 0px;
+    transition: all 300ms;
+}
+
+.card-cont:hover .img-back {
+    bottom: -40px;
+}
+
+.card-cont .card-desc {
+    font-family: 'Amiko-Semi';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #c7c7c7;
+    color: #1a1a1a;
+    margin-top: -10px;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+    text-align: center;
+    gap: 10px;
+}
+
+.card-cont .card-desc h2 {
+    margin-top: 10px;
+    color: rgb(247, 241, 241);
+}
+
+.card-cont .card-desc a {
+    width: 80%;
+}
+
+.card-cont .card-desc button {
+    width: 60%;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background: #525174;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card-cont .card-desc button:hover {
+    background: #393850;
+}
+
+.card-cont:hover .card-desc {
+    padding: 40px;
+}
+
+/** Main Tech-stack Section CSS **/
+
+.tech-stack {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #575582;
+}
+
+.tech-stack h3{
+    font-size: 3em;
+    font-family: 'Amiko-Semi';
+    padding-top: 50px;
+}
+
+.tech-stack-cont {
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.tech-card {
+    margin: auto;
+    width: 12%;
+    height: 200px;
+    border-radius: 14px;
+    background: white;
+    font-family: Roboto,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 300ms;
+    box-shadow: 5px 5px 2px;
+
+}
+
+.tech-card:hover {
+    background: #e1e1e5;
+}
+
+.tech-card img {
+    padding-top: 10px;
+    width: 80%;
+    transition: all 300ms;
+}
+
+.tech-card:hover img {
+    transform: translateY(-30px);
+}
+
+.tech-card h4 {
+    transition: all 300ms;
+}
+
+.tech-card:hover h4 {
+    transform: translateY(-30px);
+}
+
+.tech-card p {
+    color: #818080;
+}
+
+/** Contaction Section CSS **/
+
+.contact {
+    width: 100%;
+    background: #575582;
+}
+
+.contact-cont {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-cont .contact-gif {
+    width: 600px;
+}
+
+.contact-cont .contact-gif img{
+    width: 60%;
+    border-radius: 25%;
+}
+
+.contact-cont .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-cont .contact-info img {
+    padding-top: 5px;
+    width: 50px;
+}
+
+.contact-cont .contact-info h4 {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5em;
+    color: #e1e1e5;
+    padding-bottom: 10px;
+}
+
+.socials-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-cont img {
+    padding-left: 20px;
+}
